@@ -275,13 +275,12 @@ $(document).ready(function($) {
         var $form = $(this).closest("form");
         var pathToPhp = $(this).closest("form").attr("data-php-path");
         $form.validate({
-            submitHandler: function() {
-                $button.addClass("processing");
-                $.post( pathToPhp, $form.serialize(),  function(response) {
-                    $button.addClass("done").find(".status").append(response).prop("disabled", true);
-                });
-                return false;
-            }
+            // submitHandler: function() {
+            //     $.post( pathToPhp, $form.serialize(),  function(response) {
+            //         $button.addClass("done").find(".status").append(response).prop("disabled", true);
+            //     });
+            //     return false;
+            // }
         });
     });
 
